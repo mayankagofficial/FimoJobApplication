@@ -38,7 +38,16 @@ OpenAPI Specification Swagger documentation is at the default page.
 
 <a name="testing"></a>
 ## Testing
-Till now only completed Acceptance testing for all the endpoints.
+Till now only completed Acceptance testing for all the endpoints. To run the aceptance test please run the below file
+```bash
+src/test/java/com/example/fimodemo/user/controller/UserAcceptanceTest.java
+``` 
+
+To test the application in command line navigate to the root directory and run the below command
+```bash
+./mvnw clean test
+```
+
 
 <a name="database"></a>
 ## Database
@@ -59,10 +68,16 @@ This solution will be dockerized in the future to provide easy hosting service.
 Since, the service is a containerized solutions we can easily create a CI/CD pipeline using [Jenkins](https://www.jenkins.io/)
 or [GitLab](https://docs.gitlab.com/ee/ci/) and create a dockerized image which then can further be deployed.
 
-Note: For now deployment is done using the jar file, which can be generated using the command:
+Note: For now deployment is done using the jar file, which can be generated using the command in the IDE:
 ```bash
 mvn clean package
 ```
+
+To generate the jar file using command line navigate to the root directory and run the below command
+```bash
+./mvnw clean package
+```
+
 After successful completion of this command, the jar file can be found in the target folder.
 
 * Host the jar file with command:
