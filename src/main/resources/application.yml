@@ -1,0 +1,69 @@
+springdoc:
+  swagger-ui:
+    path: /
+
+application:
+  jwt:
+    claim-user-email: userEmail
+    claim-user-scopes: scope
+    token-expiration-after-days: 3
+    token-prefix: Bearer
+    secret-key: secret-key-sample-to-use-secret-key-sample-to-use
+
+spring:
+  profiles:
+    active: "dev"
+  main:
+    banner-mode: "off"
+  h2:
+    console.enabled: true
+    console.settings.trace: false
+    spring.h2.console.settings.web-allow-others: false
+
+---
+# Dev Config
+spring:
+  profiles: dev
+  jpa:
+    show-sql: true
+    generate-ddl: true
+    hibernate:
+      ddl-auto: update
+    database-platform: org.hibernate.dialect.H2Dialect
+  datasource:
+    url: jdbc:h2:file:~/devdb_fimo1
+    username: username
+    password: password
+    driverClassName: org.h2.Driver
+
+---
+# Test Config
+spring:
+  profiles: test
+  jpa:
+    show-sql: true
+    generate-ddl: true
+    hibernate:
+      ddl-auto: create-drop
+    database-platform: org.hibernate.dialect.H2Dialect
+  datasource:
+    url: jdbc:h2:file:~/testdb_fimo1
+    username: username
+    password: password
+    driverClassName: org.h2.Driver
+
+---
+# Prod Config
+spring:
+  profiles: prod
+  jpa:
+    show-sql: true
+    generate-ddl: true
+    hibernate:
+      ddl-auto: update
+    database-platform: org.hibernate.dialect.H2Dialect
+  datasource:
+    url: jdbc:h2:file:~/proddb_fimo1
+    username: username
+    password: password
+    driverClassName: org.h2.Driver
