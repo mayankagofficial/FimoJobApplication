@@ -13,7 +13,7 @@
 
 <a name="description"></a>
 ## Description
-A Sample backend service based on spring boot for Fimo Student Job Application. The application is based on the use case provided by the Fimo Healthcare. In this application the user needs to register an account and then login in the account created. Once logged in the user will receive the JWT token which will be used to perform all the other transactions. 
+A Sample backend service based on spring boot for Fimo Student Job Application. The application is based on the use case provided by the Fimo Health. In this application the user needs to register an account and then login in the account created. Once logged in the user will receive the JWT token which will be used to perform all the other transactions. 
 
 <a name="assumptions"></a>
 ## Assumptions
