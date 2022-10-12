@@ -42,7 +42,7 @@ Till now only completed Acceptance testing for all the endpoints.
 
 <a name="database"></a>
 ## Database
-[MySQL](https://www.mysql.com/).  
+[H2 Database](https://www.h2database.com/).  
 Used H2 Local Database for the complete application but can be easily modified for MySQL or any other SQL database
 
 
